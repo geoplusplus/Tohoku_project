@@ -80,11 +80,17 @@ for i = 1:mrun
     X_new(sameind) = LB(sameind); 
     ind1 = find(X_new < LB); 
     diff1 = LB(ind1) - X_new(ind1); 
-    X_new(ind1) = LB(ind1) + diff1; 
+    X_new(ind1) = LB(ind1) + diff1;
+    if avg_acc < .05
+        X_new(ind1) = LB(ind1);
+    end
     
     ind2 = find(X_new > UB); 
     diff2 = X_new(ind2) - UB(ind2); 
     X_new(ind2) = UB(ind2) - diff2; 
+    if avg_acc < .05
+        X_new(ind2) = UB(ind2);
+    end
     
     P_new = beta*target(X_new);                         % posterior value at new sample
     if P_new > best_P                              % accept sample if Pnew>P0
