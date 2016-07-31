@@ -5,7 +5,7 @@ fprintf('inside the script ATMIP_remaining \n')
 rng('shuffle');
 N = opt.N;                         % Number of markov chains
 Neff = opt.Neff;
-Neff = 10;                     % chain length 
+Neff = 40;                     % chain length 
 target = opt.target;               % target distribution
 LB = opt.LB;                       % lower bound
 UB = opt.UB;                       % upper bound

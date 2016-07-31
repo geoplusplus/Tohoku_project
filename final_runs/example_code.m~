@@ -69,7 +69,7 @@ configCluster
 
 smc = parcluster('smc'); 
 ClusterInfo.setEmailAddress('rishabh.dutta@kaust.edu.sa')
-ClusterInfo.setJobName('stage_2_3')
+ClusterInfo.setJobName('stage_3_3')
 ClusterInfo.setQueueName('short')
 ClusterInfo.setWallTime('240')
 
