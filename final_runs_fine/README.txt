@@ -1,3 +1,6 @@
+This folder is different from final_runs where the fault has finer discretizations. The 
+makemesh file is accordingly modified. 
+
 Description of the files: 
 ----------------------------------------------------------------------
 Linear inversion to get initial samples: 
