@@ -4,8 +4,8 @@ ind = ind(1);
 
 resmpl = samplestage(ind,:);
 
-xf = linspace(1,22,11);
-yf = 9:-1:1;
+xf = linspace(1,22,22);
+yf = 11:-1:1;
 [xfault,yfault] = meshgrid(xf,yf);
 zfault = zeros(9,22);
 p = xfault(:); q = yfault(:);
@@ -22,15 +22,15 @@ for i = 1: colp-1
     end
 end
 
-slip1 = resmpl(11:170);
-slip2 = resmpl(171:end);
+slip1 = resmpl(11:430);
+slip2 = resmpl(431:end);
 
 figure(1); title('maxima a posteriori model')
 subplot(211); patch(p(trired'),q(trired'),repmat(slip1,3,1)); axis equal
-colorbar;
+colorbar; axis off
 title('maxima a posteriori model');
 subplot(212); patch(p(trired'),q(trired'),repmat(slip2,3,1)); axis equal
-colorbar;
+colorbar; axis off
 
 figure(2); title('mean model')
 resmpl = mean(samplestage);

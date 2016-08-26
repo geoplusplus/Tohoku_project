@@ -42,7 +42,7 @@ tic
 ltime = toc;
 greens1 = greens;
 
-musq = 80;
+musq = 110;
 laplac1 = laplacian(trired,p,q,r); 
 laplac = musq*[laplac1 zeros(size(laplac1)); zeros(size(laplac1)) laplac1]; 
 
